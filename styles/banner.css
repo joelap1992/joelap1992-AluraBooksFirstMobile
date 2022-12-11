@@ -35,4 +35,33 @@
     background-position: 1em;
 }
 
-/*Tentei isso não deu certo, mais tarde tentar de outra forma */
+/*Tablet 1024 */
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo{
+        font-size: 36px;
+    }
+
+    .banner__pesquisa{
+        width: 50%;
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 7em;
+    }
+}
+
+@media screen and (min-width: 1363px) {
+    .banner__pesquisa{
+        width: 35%;
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 7em;
+    }
+
+    .banner{
+        padding: 5em 0;
+    }
+    
+}

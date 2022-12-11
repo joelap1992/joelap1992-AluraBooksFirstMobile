@@ -7,6 +7,15 @@
     display: inline-block;
 }
 
+/*Não consegui mudar a cor do menu verificar mais tarde! */
+.container__botao:checked ~ .container__rotulo> .menu{
+    background-image: url("../img/Menu Aberto.svg");
+}
+
+
+.container__botao:checked ~ .container__rotulo{
+    background: var(--azul-degrade);
+}
 .cabecalho{
     background-color: var(--branco);
     display: flex;
@@ -58,4 +67,105 @@
 .container__botao{
     display: none;
 
+}
+
+.container__titulo{
+    display: none;
+}
+
+.opcoes{
+    display: none;
+}
+
+.container__texto{
+    display: none;
+}
+
+/*Media query --> Tamanho de tela*/
+@media screen and (min-width: 1024px){
+    .container__titulo, .container__titulo--negrito{
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item{
+        padding: 0 1em;
+        text-transform: uppercase   ;
+    }
+
+    .opcoes__link{
+        text-decoration:none;
+        color:var(--preto);
+    }
+
+    .container__img-transparente{
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .opcoes__botao:checked ~ .lista__menu{
+        display: block;
+        width:auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    /*Pseudo Elemento e combinadores */
+    .opcoes__botao:checked ~ .opcao__rotulo > .opcoes__item{
+        background:var(--azul-degrade);
+        color: var(--branco);
+    }
+
+    .opcoes__item{
+        padding: 2em 1em;
+    }
+
+    .lista__item:hover{
+        background:var(--azul-degrade);
+    }
+
+    .lista__item:hover > .lista__link{
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1363px) {
+
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration:none;
+        color:var(--preto);
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+    .container__texto{
+        display: block;
+    }
 }

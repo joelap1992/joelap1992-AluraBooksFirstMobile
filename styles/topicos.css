@@ -29,3 +29,24 @@
     font-size:14px;
     font-weight:700;
 }
+
+.topicos__link:hover{
+    background: var(--azul-degrade);
+    color: var(--laranja);
+}
+
+@media screen and (min-width: 1024px){
+    .topico__titulo{
+        font-size: 24px;
+    }
+
+    .topicos__link{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1363px){
+    .topicos{
+        padding: 3em 20vw;
+    }
+}
